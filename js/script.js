@@ -1,18 +1,19 @@
-let canvasSize = 16;
+const canvasSize = 16;
+const canvas = document.querySelector("#canvas")
 
 function createCanvas(size) {
-    for (let i = 0; i < size; i++) {
-        for (let j = 0; j < size; j++) {
-            // create a tile div
-        }
-        // create a new row of tile divs
+    for (let i = 0; i < size*size; i++) {
+        const tile = document.createElement('div');
+        tile.classList.add('tile');
+        tile.style.width = `calc(100% / ${size}`;
+        tile.style.height = `calc(100% / ${size}`;
+        canvas.appendChild(tile);
     }
 }
 
-/*
-NOTES
+// test if works
+function updateCanvasSize(size) {
+    canvasSize = size;
+}
 
-nested for loop that creates a square div
-what should be the dimensions? relative?
-
-*/
+document.addEventListener('DOMContentLoaded', createCanvas(canvasSize))

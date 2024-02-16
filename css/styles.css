@@ -1,3 +1,7 @@
+:root {
+    --canvasSize: 
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -6,5 +10,15 @@ body {
 }
 
 #canvas {
+    display: flex;
+    flex-wrap: wrap;
     background-color: mediumorchid;
+    height: 50vw;
+    width: 50vw;
+}
+
+.tile {
+    border: 1px solid black;
+    box-sizing: border-box;
+    flex: 1 0 auto;
 }
