@@ -26,10 +26,11 @@ function createCanvas(size) {
 }
 
 function updateCanvasSize(size) {
+    canvasSize = size;
     while (canvas.firstChild) {
         canvas.removeChild(canvas.firstChild);
     }
-    createCanvas(size);
+    createCanvas(canvasSize);
 }
 
 function colorTile(tile) {
