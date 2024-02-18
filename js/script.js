@@ -10,11 +10,12 @@ function createCanvas(size) {
         tile.style.height = `calc(100% / ${size}`;
         tile.addEventListener('mouseover', () => {
             if (isDrawing) {
-                tile.style.backgroundColor = `#000000`;
+                colorTile(tile);
             }
         })
         tile.addEventListener('mousedown', () => {
             isDrawing = true;
+            colorTile(tile);
         })
         tile.addEventListener('mouseup', () => {
             isDrawing = false;
@@ -26,6 +27,10 @@ function createCanvas(size) {
 // step 4 func
 function updateCanvasSize(size) {
     canvasSize = size;
+}
+
+function colorTile(tile) {
+    tile.style.backgroundColor = `#000000`
 }
 
 document.addEventListener('DOMContentLoaded', createCanvas(canvasSize))
