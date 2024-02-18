@@ -9,6 +9,13 @@ body {
     align-items: center;
 }
 
+#topbar {
+    margin: 2em 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 #canvas {
     display: flex;
     flex-wrap: wrap;

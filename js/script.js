@@ -1,4 +1,5 @@
 const canvas = document.querySelector("#canvas")
+const btn = document.querySelector("#resetCanvas")
 let canvasSize = 16;
 let isDrawing = false;
 
@@ -24,13 +25,25 @@ function createCanvas(size) {
     }
 }
 
-// step 4 func
 function updateCanvasSize(size) {
-    canvasSize = size;
+    while (canvas.firstChild) {
+        canvas.removeChild(canvas.firstChild);
+    }
+    createCanvas(size);
 }
 
 function colorTile(tile) {
     tile.style.backgroundColor = `#000000`
 }
 
+function eraseTileColor(tile) {
+    tile.style.backgroundColor = `inherit`
+}
+
 document.addEventListener('DOMContentLoaded', createCanvas(canvasSize))
+
+// read data from prompt
+
+btn.addEventListener("click", () => {
+    updateCanvasSize(canvasSize);
+})

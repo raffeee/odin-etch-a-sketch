@@ -7,6 +7,16 @@
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
+    <div id="header">
+        
+    </div>
+    <div id="topbar">
+<!--  ang pangit ko magpangalan ng variables -->
+        <label for="canvasSize">Canvas Size</label>
+        <!-- flexbox disregards size -->
+        <input type="number" id="canvasSize" name="canvasSize" required min="2" maxlength="100" size="5" />
+        <button id="resetCanvas" onclick="updateCanvasSize(canvasSize)">Confirm</button>
+    </div>
     <div id="canvas">
         
     </div>
